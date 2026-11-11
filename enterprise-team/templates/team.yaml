@@ -1,0 +1,37 @@
+# Team settings for /enterprise-team. Commit this file; .team/runs/ is git-ignored.
+# Change roles here, or run "/enterprise-team repick" to use the picker again.
+
+roles:
+  # Business
+  product-manager: false
+  marketing: false
+  hr: false
+  legal-compliance: false
+  # Planning & Design
+  engineering-manager: false
+  software-architect: false
+  ux-designer: false
+  security-engineer: false
+  # Build
+  senior-engineer: false
+  junior-engineer: false
+  database-engineer: false
+  technical-writer: false
+  # Ship & Run
+  qa-engineer: false
+  devops-sre: false
+  it: false
+  release-manager: false
+
+# How many times rejected work is sent back before the pipeline stops and asks you.
+max_retries: 2
+
+# Per-role model overrides: opus, sonnet or haiku. Unlisted roles use the built-in defaults.
+models: {}
+  # qa-engineer: opus
+
+# Extra roles. Put each one's instructions in .team/roles/<id>.md.
+custom_roles: []
+  # - id: accessibility-auditor
+  #   after: ux-designer
+  #   model: sonnet
